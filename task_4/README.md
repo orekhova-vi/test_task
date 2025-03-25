@@ -59,7 +59,7 @@ WHERE ts > NOW() - INTERVAL '30 minutes'
 GROUP BY ip
 HAVING 
     COUNT(*) > 100 OR
-    COUNT(DISTINCT user) > 5
+    COUNT(DISTINCT user) > 5 #разных пользователей
 ORDER BY total_views DESC;
 ```
 Подозрительные IP-адреса:
